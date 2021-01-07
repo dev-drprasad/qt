@@ -1,1 +1,1 @@
-module github.com/therecipe/qt/internal/examples
+module github.com/dev-drprasad/qt/internal/examples

@@ -35,7 +35,7 @@ func Update() {
 		hash = strings.TrimSpace(utils.RunCmdOptional(cmd, "get git hash"))
 	}
 
-	utils.RunCmd(exec.Command("go", "install", "-v", fmt.Sprintf("-ldflags=\"-X=github.com/therecipe/qt/internal/cmd.buildVersion=%v\"", hash), fmt.Sprintf("github.com/dev-drprasad/qt/cmd/...")), "run \"go install\"")
+	utils.RunCmd(exec.Command("go", "install", "-v", fmt.Sprintf("-ldflags=\"-X=github.com/dev-drprasad/qt/internal/cmd.buildVersion=%v\"", hash), fmt.Sprintf("github.com/dev-drprasad/qt/cmd/...")), "run \"go install\"")
 
 	Prep(runtime.GOOS)
 }
@@ -55,5 +55,5 @@ func Upgrade() {
 		hash = strings.TrimSpace(utils.RunCmdOptional(cmd, "get git hash"))
 	}
 
-	utils.RunCmd(exec.Command("go", "install", "-v", fmt.Sprintf("-ldflags=\"-X=github.com/therecipe/qt/internal/cmd.buildVersion=%v\"", hash), fmt.Sprintf("github.com/dev-drprasad/qt/cmd/...")), "run \"go install\"")
+	utils.RunCmd(exec.Command("go", "install", "-v", fmt.Sprintf("-ldflags=\"-X=github.com/dev-drprasad/qt/internal/cmd.buildVersion=%v\"", hash), fmt.Sprintf("github.com/dev-drprasad/qt/cmd/...")), "run \"go install\"")
 }

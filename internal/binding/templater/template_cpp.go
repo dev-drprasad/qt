@@ -661,7 +661,7 @@ extern "C" int32_t __isPlatformVersionAtLeast(int32_t Platform, int32_t Major, i
 #ifndef QT_CORE_LIB
 	#error ------------------------------------------------------------------
 	#error please run: '$(go env GOPATH)/bin/qtsetup'
-	#error more info here: https://github.com/therecipe/qt/wiki/Installation
+	#error more info here: https://github.com/dev-drprasad/qt/wiki/Installation
 	#error ------------------------------------------------------------------
 #endif`
 			}

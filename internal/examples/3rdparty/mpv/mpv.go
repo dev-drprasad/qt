@@ -3,7 +3,7 @@ package mpv
 //it's also possible to directly place this file beside the files from mpv-examples/libmpv/qml
 //to get this working, change init.go to just run `make mocables`
 //and remove the cgo LDFLAGS line used to link against the static lib below
-//more info: https://github.com/therecipe/qt/issues/1162
+//more info: https://github.com/dev-drprasad/qt/issues/1162
 
 /*
 #cgo pkg-config: mpv
