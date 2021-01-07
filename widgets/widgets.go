@@ -13196,7 +13196,12 @@ func (ptr *QFileDialog) SelectUrl(url core.QUrl_ITF) {
 
 func (ptr *QFileDialog) SelectedFiles() []string {
 
-	return internal.CallLocalFunction([]interface{}{"", uintptr(ptr.Pointer()), ptr.ClassNameInternalF(), "SelectedFiles"}).([]string)
+	ifs := internal.CallLocalFunction([]interface{}{"", uintptr(ptr.Pointer()), ptr.ClassNameInternalF(), "SelectedFiles"}).([]interface{})
+	fs := []string{}
+	for _, f := range ifs {
+		fs = append(fs, f.(string))
+	}
+	return fs
 }
 
 func (ptr *QFileDialog) SelectedMimeTypeFilter() string {
